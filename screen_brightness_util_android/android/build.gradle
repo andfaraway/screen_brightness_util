@@ -25,6 +25,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace("zyz.flutter.plugin.screen_brightness_util_android")
+    }
     compileSdkVersion 31
 
     compileOptions {
